@@ -1,0 +1,50 @@
+{% extends 'base1.html' %}
+{% set active_page = "garelly" %}
+{% block body %}
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+.w3-half img{margin-bottom:6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+h2{
+  text-align: center;
+}
+.card-container {
+  padding: 10px;
+}
+
+.card {
+  margin-bottom: 20px;
+  margin-left: 10%;
+}
+</style>
+<section class="page-title-section overlay" data-background="{{ url_for('static', filename='images/backgrounds/page-title.jpg')}}">
+    <div class="container" style="margin-top: 8%;">
+      <div class="row">
+        <div class="col-md-8">
+          <ul class="list-inline custom-breadcrumb mb-2">
+            <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="index.html">Home</a></li>
+            <li class="list-inline-item text-white h3 font-secondary nasted">Gallery</li>
+          </ul>
+          <p class="text-lighten mb-0">This page illustrate the photoes and posts of different events that were featured at ME consultancy Empire </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="w3-row-padding">
+    <h2>ME consultancy Empire Gallery Page</h2>
+    <div class="w3-row">
+      {% for garelly in garelly %}
+      <div class="w3-col s12 m6">
+        <div class="card-container">
+          <div class="card">
+            <img src="{{ url_for('garelly_image', garelly_id=garelly.id) }}" onclick="onClick(this)" alt="{{ garelly.name }}">
+            <p class="card-text"><center><i>{{ garelly.name }}</i></center></p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endblock  %}

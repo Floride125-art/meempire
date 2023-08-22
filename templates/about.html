@@ -1,0 +1,80 @@
+{% extends 'base1.html' %}
+{% set active_page = "about" %}
+{% block body %}
+
+ <section class="page-title-section overlay" data-background="{{ url_for('static', filename='images/banner/mepics.jpg')}}" style="background-repeat: no-repeat; background-size: cover;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8" style="margin-top: 10%;">
+        <ul class="list-inline custom-breadcrumb mb-2">
+          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="/">Home</a></li>
+          <li class="list-inline-item text-white h3 font-secondary nasted">About Us</li>
+        </ul>
+        <p class="text-lighten mb-0">Our company offer variety of services that leads to better preparation of our aspirants path toward their education and college dream! </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /page title -->
+
+<!-- about -->
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <img class="img-fluid w-100 mb-4" src="{{ url_for('static', filename='images/banner/enodepic.JPEG')}}" alt="about image">
+        <h2 class="section-title">ABOUT ME Consultancy Empire</h2>
+        <p>we started this consultancy after getting to realise that there is a huge number of those international STUDENTS
+          who find it hard to get admission in most college abroad, since most of them face some barriers related to filling up college applications on times
+          and submit all required documents as required, we came up with this consultancy. 
+        </p>
+        <p>The uniquiness of our services is that we even go beyond the consultancy and help aspirants to get their drema universities very easy and 
+          and they get to enjoy different places they visit under visit Rwanda program
+        </p>
+        <h4>Our mission </h4>
+        <ul>
+          <li>To strive offering better services and wonderful support for aspirants who are looking for education abroad.</li>
+          <li>To send big number of student abraod through ME consultancy Empire.</li>
+          <li>To assist aspirants who are looking for work abroad serices to achieve so.</li>
+          <li>To take care of all the application process for our aspirants and make sure they get better services they deserve.</li>
+        </ul>
+       
+        <h4>Our Vision</h4>
+        <ul>
+          <li> To be the best education consultancy agency that stand out in assisting big number of students to achieve  their study abroad dreams.</li>
+        </ul>
+       
+        <h3>Our achievement and future plans</h3>
+        <ul>
+          <li>We were able to send more than 500 students from Rwanda abroad through ME consultancy empire.</li>
+          <li>More than 200 aspirants were able to secure their work abroad through our work abroad program.</li>
+          <li>We were able to establish the special service for our aspirants which is visit Rwanda and we look forward to make it successful in coming days.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about -->
+
+<!-- success story -->
+<section class="section bg-cover" data-background="{{ url_for('static', filename='images/banner/baglapy.jpg')}}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-4 position-relative success-video">
+        <a class="play-btn venobox" href="https://youtu.be/iI9b7IqpR1M" data-vbtype="video">
+          <i class="ti-control-play"></i>
+        </a>
+      </div>
+      <div class="col-lg-6 col-sm-8">
+        <div class="bg-white p-5">
+          <h2 class="section-title">This is our exciting story</h2>
+          <p>choosing ME consultancy is not something that you will regret for your life because our service and our story does worth </p>
+          <p>This story covers our uniqueness, the success stories from our aspirant, the future plans and our achievemnts so far, so never miss this opportunity by clicking and listen to our very own unique success story. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% endblock  %}
